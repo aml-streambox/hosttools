@@ -18,7 +18,7 @@ for i in $HASH_FILES;do
 	value_tmp=$(sha256sum $i);
 	value_sha256=${value_tmp:0:64};
 	key_value="sha256 = \""$value_sha256"\"";
-	sed -i "/filename = \"$i\";/a\\\t\t\t$key_value" sw-description;
+	sed -i "/filename = \"$i\";/a\\\t\t\t\t$key_value" sw-description;
 done
 
 #Generating signature
